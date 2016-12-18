@@ -140,7 +140,12 @@ var vm = new Vue({
       }
       this.currentRound += 1
       this.nextRoundSound.play();
+      this.resetWager();
     },
+    resetWager: function() {
+      this.teamOneWager = 0;
+      this.teamTwoWager = 0;
+    }
 
 
   }
