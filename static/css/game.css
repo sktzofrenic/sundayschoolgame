@@ -1,0 +1,39 @@
+body {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-color: #DADADA;
+}
+body > .grid {
+  height: 100%;
+}
+.image {
+  margin-top: -100px;
+}
+.start {
+  max-width: 450px;
+}
+
+.column {
+  max-width: 1550px;
+}
+
+.height-fix {
+    height: 450px;
+}
+
+.wager {
+  font-size: 40px;
+  padding: 5px !important;
+  width: 150px;
+}
+
+.question {
+    line-height: 50px;
+    font-size:50px !important;
+}

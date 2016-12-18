@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/game.css">
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
+
+    <meta charset="utf-8">
+    <title>Christmas Trivia</title>
+  </head>
+  <body>
+
+    <div id="game" class="ui middle aligned center aligned grid">
+      <div  class="ui middle aligned center aligned grid" v-if="!gameIsRunning">
+        <div class="column start" >
+          <div class="ui center aligned grid">
+            <h1 class="ui teal header" style="font-size:34px">Christmas Betting Game</h1>
+          </div>
+          <h2 class="ui red image header">
+            <div class="content">
+              Start New Game
+            </div>
+          </h2>
+
+          <form class="ui large form">
+            <div class="ui stacked segment">
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input type="text"  placeholder="Team 1" v-model="teamOneName">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input type="text"  placeholder="Team 2" v-model="teamTwoName">
+                </div>
+              </div>
+              <div class="ui fluid large red submit button" @click="startNewGame">Start Game</div>
+            </div>
+            <div class="ui error message"></div>
+          </form>
+
+        </div>
+
+      </div>
+      <div  class="ui middle aligned center aligned two column grid" v-if="gameIsRunning">
+
+        <div class="row">
+          <div class="black column">
+            <h1 class="ui green header" style="font-size:48px">Round: {{ currentRound }}/{{ maxRounds}}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="black column">
+            <h1 class="ui teal header" style="font-size:64px">{{ teamOneName }}</h1>
+
+          </div>
+          <div class="black column">
+            <h1 class="ui teal header" style="font-size:64px">{{ teamTwoName }}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="teal column">
+            <h1 class="ui standard header" style="font-size:50px">Points: {{ teamOnePoints }}</h1>
+
+          </div>
+          <div class="teal column">
+            <h1 class="ui standard header" style="font-size:50px">Points: {{ teamTwoPoints }}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="grey column">
+            <h1 class="ui standard header" style="font-size:34px">Wager </h1>
+            <div class="ui input">
+              <input class="wager" type="text" v-model="teamOneWager">
+            </div>
+
+          </div>
+          <div class="grey column">
+            <h1 class="ui standard header" style="font-size:34px">Wager</h1>
+            <div class="ui input">
+              <input class="wager" type="text" v-model="teamTwoWager">
+            </div>
+          </div>
+        </div>
+
+        <div class="row" :class="reverseQuestions">
+          <div class="ui" :class="showDimmer">
+            <div class="ui loader"></div>
+          </div>
+          <div class="red height-fix column">
+            <h1 class="ui standard header" style="font-size:34px">Hard Question </h1>
+            <div class="ui message">
+              <div class="header question">
+                {{ getHardQuestion().question }}
+
+                <div class="ui modal" :class="showHardAnswer">
+                  <div class="header">Answer</div>
+                  <div class="content">
+                    <p class="question">{{ getHardQuestion().answer }}</p>
+                    <div class="ui large black submit button" @click="showHardAnswer.active = false">Hide Answer</div>
+                  </div>
+                </div>
+                <p>
+                  <div class="ui large black submit button" @click="showHardAnswer.active = true">Show Answer</div>
+                  <div class="ui large green submit button" @click="rightAnswer(reverseQuestions, getHardQuestion('hard'))">Right!</div>
+                  <div class="ui large red submit button" @click="wrongAnswer(reverseQuestions, getHardQuestion('hard'))">Wrong!</div>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="green height-fix column">
+            <h1 class="ui standard header" style="font-size:34px">Easy Question</h1>
+            <div class="ui message">
+              <div class="header question">
+                {{ getEasyQuestion().question }}
+                <div class="ui modal" :class="showEasyAnswer">
+                  <div class="header">Answer</div>
+                  <div class="content">
+                    <p class="question">{{ getEasyQuestion().answer }}</p>
+                    <div class="ui large black submit button" @click="showEasyAnswer.active = false">Hide Answer</div>
+                  </div>
+                </div>
+                <p>
+                  <div class="ui large black submit button" @click="showEasyAnswer.active = true">Show Answer</div>
+                  <div class="ui large green submit button" @click="rightAnswer(reverseQuestions, getEasyQuestion('easy'))">Right!</div>
+                  <div class="ui large red submit button" @click="wrongAnswer(reverseQuestions, getEasyQuestion('easy'))">Wrong!</div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="one column row">
+          <div class="column">
+            <div class="ui large orange submit button" @click="randomizeQuestion" v-if="currentRound < maxRounds">Roll Dice</div>
+            <div class="ui large orange submit button" @click="nextRound" v-if="currentRound < maxRounds">Next Round</div>
+            <div class="ui large red submit button" @click="endGame">Reset</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  <script type="text/javascript" src="static/js/app.js"></script>
+  </body>
+</html>
