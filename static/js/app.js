@@ -132,13 +132,13 @@ var vm = new Vue({
       this.wrongAnswerSound.play();
     },
     nextRound: function() {
+      this.currentRound += 1;
       if (this.currentRound > this.maxRounds) {
         alert('game over')
         this.gameOverSound.play();
         this.endGame()
         return
       }
-      this.currentRound += 1
       this.nextRoundSound.play();
       this.resetWager();
     },
