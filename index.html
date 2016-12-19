@@ -107,7 +107,7 @@
                     <div class="ui large black submit button" @click="showHardAnswer.active = false">Hide Answer</div>
                   </div>
                 </div>
-                <p>                  
+                <p>
                   <div class="ui large black submit button" @click="showHardAnswer.active = true">Show Answer</div>
                   <div class="ui large green submit button" @click="rightAnswer(reverseQuestions, getHardQuestion('hard'))">Right!</div>
                   <div class="ui large red submit button" @click="wrongAnswer(reverseQuestions, getHardQuestion('hard'))">Wrong!</div>
@@ -140,8 +140,8 @@
 
         <div class="one column row">
           <div class="column">
-            <div class="ui large orange submit button" @click="randomizeQuestion" v-if="currentRound < maxRounds">Roll Dice</div>
-            <div class="ui large orange submit button" @click="nextRound" v-if="currentRound < maxRounds">Next Round</div>
+            <div class="ui large orange submit button" @click="randomizeQuestion" v-if="currentRound <= maxRounds">Roll Dice</div>
+            <div class="ui large orange submit button" @click="nextRound" v-if="currentRound <= maxRounds">Next Round</div>
             <div class="ui large red submit button" @click="endGame">Reset</div>
           </div>
         </div>
