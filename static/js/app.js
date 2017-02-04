@@ -4,7 +4,7 @@ var vm = new Vue({
         rightAnswerSound: new Audio('static/sound/smb_1-up.wav'),
         wrongAnswerSound: new Audio('static/sound/smb_mariodie.wav'),
         gameOverSound: new Audio('static/sound/smb_world_clear.wav'),
-        nextRoundSound: new Audio('static/sound/mlss_battlestart.wav'),
+        nextRoundSound: new Audio('static/sound/smb3_enter_level.wav'),
         rollingDiceSound: new Audio('static/sound/smb2_bonus_chance_start.wav'),
         gameIsRunning: false,
         teamOnePoints: 1000,
@@ -36,93 +36,93 @@ var vm = new Vue({
         },
         questions: {
             easy: [{
-                    question: 'After leaving Bethlehem, to which country did Joseph, Mary, and Jesus travel?',
-                    answer: 'Egypt'
+                    question: 'How old was Moses when he left Egypt after failing to free the Israelites?',
+                    answer: '40 years old'
                 },
                 {
-                    question: 'Who told Mary and Joseph to go to Bethlehem?',
-                    answer: 'Caesar Augustus'
+                    question: 'On which river was Moses hidden among the bulrushes?',
+                    answer: 'Nile'
                 },
                 {
-                    question: 'What are the meanings of the names Jesus and Emmanuel?',
-                    answer: 'Jesus means Savior and Emmanuel means God with us'
+                    question: 'What was Moses\'s sister\'s name?',
+                    answer: 'Miriam'
                 },
                 {
-                    question: 'When the shepherds went looking for Jesus, what was the sign they were to look for?',
-                    answer: 'A baby, wrapped in swaddling clothes, lying in a manger.'
+                    question: 'Who was Moses\' wife?',
+                    answer: 'Zipporah'
                 },
                 {
-                    question: 'Who told Joseph the baby’s name was to be Jesus?',
-                    answer: 'An angel in Matthew 1:21'
+                    question: 'As God parted the Red Sea for the Israelites, what did Moses hold out over the water?',
+                    answer: 'His staff/rod'
                 },
                 {
-                    question: 'Herod asked the wise men to inform him where the baby Jesus was. Why?',
-                    answer: 'So that he could worship the child.'
+                    question: 'Who found Moses and adopted him?',
+                    answer: 'The Pharaoh\'s daughter.'
                 },
                 {
-                    question: 'What are the three gifts which are mentioned being given by the wise men?',
-                    answer: 'Gold, frankincense and myrrh.'
+                    question: 'How did the Lord appear to Moses in the desert?',
+                    answer: 'In a burning bush'
                 },
                 {
-                    question: 'Which country was Joseph originally from?',
-                    answer: 'Bethlehem'
+                    question: 'What was the first plague in Egypt?',
+                    answer: 'Water turning to blood'
                 },
                 {
-                    question: 'How many angels spoke to the shepherds? ',
-                    answer: 'Multitude'
+                    question: 'What would have happened to the people of Israel if they had ascended Mt. Sinai?',
+                    answer: 'Death'
                 },
                 {
-                    question: 'When Joseph found Mary was pregnant, what was his reaction?',
-                    answer: 'Joseph, not willing to make her a publick example, was minded to put her away privily.'
+                    question: 'What signal did God use to lead the Israelites by day?',
+                    answer: 'A cloud'
                 },
                 {
-                    question: 'After Jesus was born, where did Mary lay Him?',
-                    answer: 'a Manger'
+                    question: 'Why did God lead the Israelites the long way towards the red sea?',
+                    answer: 'God thought they would turn back if they encountered war with the Philistines. '
                 },
             ],
             hard: [{
-                    question: 'Which Old Testament prophet had the most to say about the birth of Christ?',
-                    answer: 'Isaiah'
+                    question: 'Approximately how many years were the Israelites in bondage to Egypt?',
+                    answer: '400'
                 },
                 {
-                    question: 'In the accounts announcing the birth of Christ how many times did an angel or angels appear?',
-                    answer: 'At least 3 angelic announcements for the birth of Christ and 1 for the birth of John.'
+                    question: 'What was the 8th plague?',
+                    answer: 'Locusts'
                 },
                 {
-                    question: 'What form of transportation did Mary and Joseph use to get to Bethlehem?',
-                    answer: 'The Bible does not say'
+                    question: 'On what animal did Moses ride on his way back to Egypt after leaving Jethro?',
+                    answer: 'We don\'t know. Exodus 4:20'
                 },
                 {
-                    question: 'How many wise men or kings or magi came to see Jesus?',
-                    answer: 'The Bible does not say how many wise men there were.'
+                    question: 'What was the first plague that the magicians couldn\'t duplicate?',
+                    answer: 'third plague - lice Exodus 8:18'
                 },
                 {
-                    question: 'How old was Jesus when the wise men found him?',
-                    answer: 'Jesus was somewhere between a month old and a couple of years old.'
+                    question: 'What was the first plague that spared the Israelites?',
+                    answer: 'fourth plague - flies Exodus 8:22'
                 },
                 {
-                    question: 'What animals does the Bible say were present at the birth of Jesus?',
-                    answer: 'There is no definite list of animals mentioned in the Bible.'
+                    question: 'What was the first plague that allowed some of the Egyptians to escape if they heeded Moses warnings?',
+                    answer: 'seventh plague - hail Exodus 9:20'
                 },
                 {
-                    question: 'What was the name of the unkind innkeeper who would not allow the pregnant Mary to lodge in his inn?',
-                    answer: 'The Bible does not say.'
+                    question: 'Why did the Egyptians despise the Israelites?',
+                    answer: 'The Israelites were shepherds'
                 },
                 {
-                    question: 'What is the name of the priest who was told he would not die until he saw the Savior?',
-                    answer: 'Simeon.'
+                    question: 'Which tribe of Israel\'s family bore Moses?',
+                    answer: 'Levi.'
                 },
                 {
-                    question: 'Two of the four Gospels do not mention the birth of Christ. Which two?',
-                    answer: 'Neither Mark or John tell the story of the birth of Christ.'
+                    question: 'What three foods were to be eaten at passover?',
+                    answer: 'Lamb, unleavened bread, and bitter herbs'
                 },
                 {
-                    question: 'What did the angels sing to the shepherds?',
-                    answer: 'Technically angels are never said to “sing” in the Bible. Each time they appear they only speak.'
+                    question: 'How does the book of Acts describe Moses?',
+                    answer: 'And Moses was learned in all the wisdom of the Egyptians, and was mighty in words and in deeds. Acts 7:22'
                 },
                 {
-                    question: 'When they returned from Egypt, where did Jesus and His family dwell?',
-                    answer: 'Nazareth'
+                    question: 'Who was trying kill Moses on his way from Midain, to Egypt?',
+                    answer: 'God'
                 }
             ]
         }
