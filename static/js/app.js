@@ -135,6 +135,8 @@ var vm = new Vue({
             this.teamOneHerod = 1;
             this.teamOneHerod = 1;
             this.currentRound = 1;
+            this.teamOneWager = 0;
+            this.teamTwoWager = 0;
         },
         endGame: function() {
             this.gameIsRunning = false;
@@ -227,12 +229,20 @@ var vm = new Vue({
                     console.log(result)
                     vm.teamOneWager = Math.abs(result.teamOne);
                     if (vm.teamOneWager > Math.abs(vm.teamOnePoints)) {
-                      vm.teamOneWager = Math.abs(vm.teamOnePoints)
+                      if (Math.abs(vm.teamOnePoints) < 1000) {
+                        vm.teamOneWager = 1000
+                      } else {
+                        vm.teamOneWager = Math.abs(vm.teamOnePoints)
+                      }
                     }
 
                     vm.teamTwoWager = Math.abs(result.teamTwo);
                     if (vm.teamTwoWager > Math.abs(vm.teamTwoPoints)) {
-                      vm.teamTwoWager = Math.abs(vm.teamTwoPoints)
+                      if (Math.abs(vm.teamTwoPoints) < 1000) {
+                        vm.teamTwoWager = 1000
+                      } else {
+                        vm.teamTwoWager = Math.abs(vm.teamTwoPoints)
+                      }
                     }
                     setTimeout(function(){vm.loading = false;}, 500)
 
