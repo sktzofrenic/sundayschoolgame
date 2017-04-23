@@ -22,8 +22,8 @@ var vm = new Vue({
             active: false
         },
         maxRounds: 11,
-        teamOneName: 'Israelites',
-        teamTwoName: 'Egyptians',
+        teamOneName: 'Zebras',
+        teamTwoName: 'Elephants',
         teamOneWager: 0,
         teamTwoWager: 0,
         reverseQuestions: {
@@ -36,93 +36,93 @@ var vm = new Vue({
         },
         questions: {
             easy: [{
-                    question: 'How old was Moses when he left Egypt after failing to free the Israelites?',
-                    answer: '40 years old'
+                    question: 'In which compass direction, was Job said to live?',
+                    answer: 'The east'
                 },
                 {
-                    question: 'On which river was Moses hidden among the bulrushes?',
-                    answer: 'Nile'
+                    question: 'Who brought up Job as a potential test subject?',
+                    answer: 'God'
                 },
                 {
-                    question: 'What was Moses\'s sister\'s name?',
-                    answer: 'Miriam'
+                    question: 'What had Satan been up to when God asked, "Whence comest thou?"',
+                    answer: 'Going to and fro in the earth, and from walking up and down in it.'
                 },
                 {
-                    question: 'Who was Moses\' wife?',
-                    answer: 'Zipporah'
+                    question: 'What did Satan accuse God of doing to protect Job?',
+                    answer: 'Hedge of protection'
                 },
                 {
-                    question: 'As God parted the Red Sea for the Israelites, what did Moses hold out over the water?',
-                    answer: 'His staff/rod'
+                    question: 'To what animal was Job\'s friend Eliphaz most similar?',
+                    answer: 'Your mom.'
                 },
                 {
-                    question: 'Who found Moses and adopted him?',
-                    answer: 'The Pharaoh\'s daughter.'
+                    question: 'To what animal was the young man Elihu most similar?',
+                    answer: 'Emu'
                 },
                 {
                     question: 'How did the Lord appear to Moses in the desert?',
                     answer: 'In a burning bush'
                 },
                 {
-                    question: 'What was the first plague in Egypt?',
-                    answer: 'Water turning to blood'
+                    question: 'What were Job\'s children doing the day they were killed in their eldest brother\'s house?',
+                    answer: 'Eating and drinking...WINE!'
                 },
                 {
-                    question: 'What would have happened to the people of Israel if they had ascended Mt. Sinai?',
-                    answer: 'Death'
+                    question: 'Was Job at risk for suicide based on the The Columbia-Suicide Severity Rating Scale?',
+                    answer: 'Yes'
                 },
                 {
-                    question: 'What signal did God use to lead the Israelites by day?',
-                    answer: 'A cloud'
+                    question: 'Which of Job\'s friends had a dream where he was visited by an evil spirit?',
+                    answer: 'Eliphaz'
                 },
                 {
-                    question: 'Why did God lead the Israelites the long way towards the red sea?',
-                    answer: 'God thought they would turn back if they encountered war with the Philistines. '
+                    question: 'Why did Elihu wait so long before speaking?',
+                    answer: 'Job 32:4  Now Elihu had waited till Job had spoken, because they were elder than he.'
                 },
             ],
             hard: [{
-                    question: 'Approximately how many years were the Israelites in bondage to Egypt?',
-                    answer: '400'
+                    question: 'How many sons and daughters did Job have?',
+                    answer: '14 Sons, 6 Daughters'
                 },
                 {
-                    question: 'What was the 8th plague?',
-                    answer: 'Locusts'
+                    question: 'How many sheep did Job have',
+                    answer: 'Twenty One Thousand'
                 },
                 {
-                    question: 'On what animal did Moses ride on his way back to Egypt after leaving Jethro?',
-                    answer: 'We don\'t know. Exodus 4:20'
+                    question: 'What band of bandits destroyed Job\'s camels?',
+                    answer: 'Chaldeans'
                 },
                 {
-                    question: 'What was the first plague that the magicians couldn\'t duplicate?',
-                    answer: 'third plague - lice Exodus 8:18'
+                    question: 'Why was Job so wealthy at the beginning of the story?',
+                    answer: 'His testimony wouldn\'t have been book-of-the-bible worthy'
                 },
                 {
-                    question: 'What was the first plague that spared the Israelites?',
-                    answer: 'fourth plague - flies Exodus 8:22'
+                    question: 'What was Elihu\'s response to Jobs complaint that God was his enemy?',
+                    answer: 'God saved us while we were opposing him - Job 33:17'
                 },
                 {
-                    question: 'What was the first plague that allowed some of the Egyptians to escape if they heeded Moses warnings?',
-                    answer: 'seventh plague - hail Exodus 9:20'
+                    question: 'How many bullocks and rams did Eliphaz, Bildad, and Zophar need to bring to Job?',
+                    answer: 'Seven bullocks, seven rams'
                 },
                 {
-                    question: 'Why did the Egyptians despise the Israelites?',
-                    answer: 'The Israelites were shepherds'
+                    question: 'How old was Job when he died?',
+                    answer: '140 years old'
                 },
                 {
-                    question: 'Which tribe of Israel\'s family bore Moses?',
-                    answer: 'Levi.'
+                    question: 'Name one of Jobs children',
+                    answer: 'Job 42:14  And he called the name of the first, Jemima; and the name of the second, Kezia; and the name of the third, Kerenhappuch. '
                 },
                 {
-                    question: 'What three foods were to be eaten at passover?',
-                    answer: 'Lamb, unleavened bread, and bitter herbs'
+                    question: 'How did Job describe his repentence after seeing and hearing GOd?',
+                    answer: 'Job 42:6  Wherefore I abhor myself, and repent in dust and ashes.'
                 },
                 {
-                    question: 'How does the book of Acts describe Moses?',
-                    answer: 'And Moses was learned in all the wisdom of the Egyptians, and was mighty in words and in deeds. Acts 7:22'
+                    question: 'Give two reasons why we shouldn\'t be so hard on Job\'s wife',
+                    answer: '1. She lost everything too 2. Job was the greatest man in the east'
                 },
                 {
-                    question: 'Who was trying kill Moses on his way from Midain, to Egypt?',
-                    answer: 'God'
+                    question: 'What lesson can we learn from Job\'s wife turning so sharply against him in adversity?',
+                    answer: 'You have to have your own relationship with God. Also not everyone is at the same point of spiritual growth even in families.' 
                 }
             ]
         }
@@ -221,30 +221,32 @@ var vm = new Vue({
             this.teamTwoWager = 0;
         },
         getWagers: function() {
-          var vm = this;
-          vm.loading = true;
+            var vm = this;
+            vm.loading = true;
             $.ajax({
                 url: "https://myground.org/wagers/status/status",
                 success: function(result) {
                     console.log(result)
                     vm.teamOneWager = Math.abs(result.teamOne);
                     if (vm.teamOneWager > Math.abs(vm.teamOnePoints)) {
-                      if (Math.abs(vm.teamOnePoints) < 1000) {
-                        vm.teamOneWager = 1000
-                      } else {
-                        vm.teamOneWager = Math.abs(vm.teamOnePoints)
-                      }
+                        if (Math.abs(vm.teamOnePoints) < 1000) {
+                            vm.teamOneWager = 1000
+                        } else {
+                            vm.teamOneWager = Math.abs(vm.teamOnePoints)
+                        }
                     }
 
                     vm.teamTwoWager = Math.abs(result.teamTwo);
                     if (vm.teamTwoWager > Math.abs(vm.teamTwoPoints)) {
-                      if (Math.abs(vm.teamTwoPoints) < 1000) {
-                        vm.teamTwoWager = 1000
-                      } else {
-                        vm.teamTwoWager = Math.abs(vm.teamTwoPoints)
-                      }
+                        if (Math.abs(vm.teamTwoPoints) < 1000) {
+                            vm.teamTwoWager = 1000
+                        } else {
+                            vm.teamTwoWager = Math.abs(vm.teamTwoPoints)
+                        }
                     }
-                    setTimeout(function(){vm.loading = false;}, 500)
+                    setTimeout(function() {
+                        vm.loading = false;
+                    }, 500)
 
                 }
             });
